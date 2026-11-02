@@ -1,28 +1,30 @@
 user = {}
-
+user_inputs = []
 keys = ["name", "email", "password"]
 
-name = input("Enter name: ")
-email = input("Enter email: ")
-password = input("Enter password: ")
-
-user_inputs = [name, email, password]
-   
      
-i = 0
-while i < len(keys):
-    user.update({keys[i]: user_inputs[i]})
-    i += 1
+def get_user():
+    name = input("Enter name: ")
+    email = input("Enter email: ")
+    password = input("Enter password: ")
+    credentials = [name, email, password]
+    user_inputs.append(credentials)
 
+
+get_user()
+print(user_inputs)
+
+# def create_user():
+#     i = 0
+#     while i < len(keys):
+#         user.update({keys[i]: user_inputs[i]})
+
+
+# if not user:
+#     get_user()
+#     create_user()
+
+
+        
 print(user)
-    
-
 # print(user_input())
-
-# def create_user(name, email, password):
-#     if user != None:
-#         user = {
-#             "name": name,
-#             "email": email,
-#             "password": password
-#         }
